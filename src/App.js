@@ -1,5 +1,4 @@
 import "./App.css";
-
 import nishyan from "./icons/nishyan.png";
 import vector from "./icons/Vector.png";
 import home from "./icons/Home.png";
@@ -15,10 +14,14 @@ import products from "./icons/Products.png";
 import tools from "./icons/Tools.png";
 import discounts from "./icons/Discounts.png";
 import wallet from "./icons/wallet.png";
+import questionmark from "./headers/Vector.png";
+
+import message from "./headers/Menu.png";
+import arrow from "./headers/arrow.png";
 
 function App() {
   return (
-    <div>
+    <div className="flex-container-row ">
       <nav className="navbar gap-row-24 flex-container-column">
         {/* For Company Icon */}
         <div className="flex-container margin-8 gap-column-12 height-42 ">
@@ -101,8 +104,42 @@ function App() {
           </div>
         </div>
       </nav>
+      <div className="flex-container-column frame">
+        <header className="dashboard-header flex-container gap-column-16">
+          <div className="flex-container-row gap-column-16 frame-1">
+            <div>Payments</div>
+            <div className="flex-container gap-column-6">
+              <img
+                style={{ width: "14px", height: "14px" }}
+                src={questionmark}
+                alt="icon"
+              />
+              <div style={{ fontSize: "12px", fontWeight: "300" }}>
+                How it works
+              </div>
+            </div>
+          </div>
+          <div>
+            <input
+              className="searchBar"
+              placeholder="Search features, tutorials, etc."
+            />
+          </div>
+          <div className="gap-column-12 flex-container-1 frame-3">
+            <div>
+              <img src={message} alt="icon" />
+            </div>
+            <div>
+              <img src={arrow} alt="icon" />
+            </div>
+          </div>
+        </header>
 
-      <header className="frame"></header>
+        <section className="Section">
+          <div></div>
+          <div></div>
+        </section>
+      </div>
     </div>
   );
 }
