@@ -17,6 +17,7 @@ import wallet from "./icons/wallet.png";
 import questionmark from "./headers/Vector.png";
 import message from "./headers/Menu.png";
 import arrow from "./headers/arrow.png";
+import headersearch from "./headers/search.png";
 import blackarrow from "./frames/arrow.png";
 import sort from "./frames/Sort.png";
 import download from "./frames/download.png";
@@ -24,6 +25,23 @@ import orderArrow from "./frames/orderArrow.png";
 import transaction from "./frames/transaction.png";
 import rightArrow from "./frames/Chevron Right.png";
 import leftArrow from "./frames/Chevron left.png";
+
+function DataCard({ heading, value }) {
+  return (
+    <div className="databox flex-container-column gap-row-16">
+      <div
+        style={{
+          fontSize: "16px",
+          fontWeight: "400",
+          color: "#4D4D4D",
+        }}
+      >
+        {heading}
+      </div>
+      <div style={{ fontSize: "32px" }}>{value}</div>
+    </div>
+  );
+}
 
 function App() {
   return (
@@ -125,9 +143,10 @@ function App() {
               </div>
             </div>
           </div>
-          <div>
+          <div className="flex-container-start searchBar gap-column-8">
+            <img src={headersearch} alt="icon" />
             <input
-              className="searchBar"
+              className="search-input"
               placeholder="Search features, tutorials, etc."
             />
           </div>
@@ -151,18 +170,8 @@ function App() {
               </div>
             </div>
             <div className="flex-container-row gap-column-20">
-              <div className="databox flex-container-column gap-row-24">
-                <div style={{ fontSize: "12px", fontWeight: "300px" }}>
-                  Online Orders
-                </div>
-                <div style={{ fontSize: "24px" }}>231</div>
-              </div>
-              <div className="databox flex-container-column gap-row-24">
-                <div style={{ fontSize: "12px", fontWeight: "300px" }}>
-                  Amount Received
-                </div>
-                <div style={{ fontSize: "24px" }}>23,92,312.19</div>
-              </div>
+              <DataCard heading={"Online Orders"} value={231} />
+              <DataCard heading={"Amount Received"} value={"23,92,312.19"} />
             </div>
           </div>
 
@@ -171,9 +180,10 @@ function App() {
             <div className="section-data ">
               <div className="gap-row-12 flex-container-column">
                 <div className="flex-container">
-                  <div>
+                  <div className="flex-container-start searchBar-1 gap-column-8">
+                    <img src={headersearch} alt="icon" />
                     <input
-                      className="searchBar-1"
+                      className="search-input-1"
                       placeholder="Search by order ID..."
                     />
                   </div>
@@ -213,7 +223,7 @@ function App() {
               </div>
               <div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -221,7 +231,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -229,7 +239,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -237,7 +247,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -245,7 +255,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -253,7 +263,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -261,7 +271,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -269,7 +279,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -277,7 +287,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -285,7 +295,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -293,7 +303,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -301,7 +311,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -309,7 +319,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -317,7 +327,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -325,7 +335,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -333,7 +343,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -341,7 +351,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -349,7 +359,7 @@ function App() {
                   <div className="flex-container-1  data-container">₹22</div>
                 </div>
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
@@ -360,7 +370,7 @@ function App() {
 
               <div className="flex-container-column gap-row-24">
                 <div className="flex-container gap-column-40 data-column">
-                  <div className="data-container">#281209</div>
+                  <div className="data-container blue-color">#281209</div>
                   <div className="  data-container">7 July, 2023</div>
                   <div className="data-container flex-container-1">
                     ₹1,278.23
